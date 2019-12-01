@@ -7,5 +7,5 @@
   * @apiDescription Sum two numbers.
   * @apiParam {Integer} a First number.
   * @apiParam {Integer} b Second number.
-  * @apiSuccess {Integer} sum Sum of a & b.
+  * @apiSuccess {Integer} sum Sum of a and b.
   */
