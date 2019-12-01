@@ -5,6 +5,11 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: stefanoeb/jest-action@master
+  test2:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [10.x]
@@ -15,7 +20,23 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
-    - run: yarn testci
+    - run: yarn test
       env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         CI: true
+  test3:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: yarn install
+    - uses: docker://rkusa/jest-action:latest
+      with:
+          annotate: true
+      env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
