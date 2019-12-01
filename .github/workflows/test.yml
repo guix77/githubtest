@@ -1,0 +1,9 @@
+name: Test
+
+on: [push]
+
+resolves: ['Jest']
+
+action:
+  name: 'Jest'
+  uses: 'stefanoeb/jest-action@master'
