@@ -17,4 +17,5 @@ jobs:
     - run: yarn install
     - run: yarn testci
       env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         CI: true
