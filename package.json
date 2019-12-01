@@ -13,6 +13,6 @@
   "scripts": {
     "lint": "./node_modules/standard/bin/cmd.js",
     "test": "./node_modules/jest/bin/jest.js",
-    "testci": "./node_modules/jest/bin/jest.js --reporters=default --reporters=jest-github-actions-reporter"
+    "testci": "CI=true ./node_modules/jest/bin/jest.js --reporters=default --reporters=jest-github-actions-reporter"
   }
 }
