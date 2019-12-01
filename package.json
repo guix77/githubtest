@@ -7,12 +7,10 @@
   "main": "src/index.js",
   "devDependencies": {
     "jest": "^24.9.0",
-    "jest-github-actions-reporter": "^1.0.2",
     "standard": "^14.3.1"
   },
   "scripts": {
     "lint": "./node_modules/standard/bin/cmd.js",
-    "test": "./node_modules/jest/bin/jest.js",
-    "testci": "CI=true ./node_modules/jest/bin/jest.js --reporters=default --reporters=jest-github-actions-reporter"
+    "test": "./node_modules/jest/bin/jest.js"
   }
 }

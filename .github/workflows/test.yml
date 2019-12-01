@@ -3,7 +3,7 @@ name: Test
 on: [push]
 
 jobs:
-  test3:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -15,8 +15,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
-    - uses: docker://rkusa/jest-action:latest
-      with:
-          annotate: true
-      env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - run: yarn test
