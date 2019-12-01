@@ -6,10 +6,12 @@
   "private": false,
   "main": "src/index.js",
   "devDependencies": {
+    "apidoc": "^0.18.0",
     "jest": "^24.9.0",
     "standard": "^14.3.1"
   },
   "scripts": {
+    "doc": "./node_modules/apidoc/bin/apidoc -i src/ -o ./apidoc",
     "lint": "./node_modules/standard/bin/cmd.js",
     "test": "./node_modules/jest/bin/jest.js"
   }
