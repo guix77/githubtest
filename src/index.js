@@ -1,7 +1,5 @@
-const main = () => {
-  console.log('Hello')
-  console.log('Welcome')
-  console.log('Everybody')
-}
+const sum = require('./helpers/sum')
 
-main()
+const result = sum(1, 2)
+
+console.log(result)
