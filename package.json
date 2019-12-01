@@ -1,0 +1,14 @@
+{
+  "name": "githubtest",
+  "version": "1.0.0",
+  "author": "Guillaume Duveau <guillaume.duveau@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "src/index.js",
+  "devDependencies": {
+    "standard": "^14.3.1"
+  },
+  "scripts": {
+    "lint": "standard"
+  }
+}
