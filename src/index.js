@@ -1,7 +1,7 @@
 const main = () => {
-  console.log('Hello');
+  console.log('Hello')
   console.log('Welcome')
-  console.log('Everybody');
+  console.log('Everybody')
 }
 
 main()
