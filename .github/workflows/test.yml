@@ -8,9 +8,3 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: stefanoeb/jest-action@master
-        with:
-          # show errors in the the github diff UI
-          annotate: true
-        # Allow the action to add lint errors to the github diff UI
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
