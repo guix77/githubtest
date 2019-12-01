@@ -40,7 +40,7 @@ define({ "api": [
             "type": "Integer",
             "optional": false,
             "field": "sum",
-            "description": "<p>Sum of a and b.</p>"
+            "description": "<p>Sum of a &amp; b.</p>"
           }
         ]
       }
