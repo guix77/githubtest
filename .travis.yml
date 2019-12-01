@@ -4,5 +4,8 @@ node_js:
 
 cache: yarn
 
-script:
-  - yarn run lint
+jobs:
+  include:
+    - stage: "Lint"
+      name: "Lint code"
+      script: yarn run lint
