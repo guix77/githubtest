@@ -2,8 +2,15 @@ name: Test
 
 on: [push]
 
-resolves: ['Jest']
-
-action:
-  name: 'Jest'
-  uses: 'stefanoeb/jest-action@master'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: stefanoeb/jest-action@master
+        with:
+          # show errors in the the github diff UI
+          annotate: true
+        # Allow the action to add lint errors to the github diff UI
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
