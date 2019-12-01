@@ -3,11 +3,6 @@ name: Test
 on: [push]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: stefanoeb/jest-action@master
   test2:
     runs-on: ubuntu-latest
     strategy:
@@ -19,6 +14,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: yarn install
     - run: yarn test
       env:
         CI: true
